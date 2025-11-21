@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 const barCtx = document.getElementById('myBarChart');
-    fetch('/facts_json/')
+    fetch('/facts/')
         .then(response => response.json())
         .then(allFacts => {
             const labels = allFacts.map(fact => fact.funFact);
