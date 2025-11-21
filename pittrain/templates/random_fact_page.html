@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random PIT Airport Train Fact</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    {% load static %}
+</head>
+<body>
+    {% if fact %}
+        <h1>Random Fun Fact</h1>
+        <p>{{ fact.funFact }}</p>
+        <p><small>Date added: {{ fact.dateAdded }}</small></p>
+        <p><small>{{ fact.score }}</small></p>
+        <div class="chart-container">
+            <canvas id="myBarChart"></canvas>
+        </div>
+    {% else %}
+        <p>No fun facts yet!</p>
+    {% endif %}
+<script src="{% static 'app.js' %}"></script>
+</body>
+</html>
